@@ -1,0 +1,87 @@
+.navigation
+    width: 100%
+    height: 75px
+    margin-top: 60px
+    display: flex
+    justify-content: space-between
+    align-items: center
+    &_text
+        width: 350px
+        height: 75px
+        display: flex
+        justify-content: space-between
+        align-items: center
+        h2
+            font-weight: 500
+            cursor: pointer
+            text-decoration: none
+        a
+            color: black
+
+    &_search
+        width: 500px
+        height: 75px
+        display: flex
+        justify-content: space-between
+        input
+            width: 425px
+            height: 75px
+            background: #B1D2DB
+            padding-right: 30px
+            padding-left: 30px
+            border: none
+            outline: none
+            font-size: 20px
+    &_btn-search
+        width: 75px
+        height: 75px
+        background: #1C4A47
+        display: flex
+        justify-content: center
+        align-items: center
+        transition: 0.2s all
+        img
+            width: 36px
+            height: 33px
+        &:hover
+            box-shadow: inset 0px 0px 0px 9px #63A583
+            cursor: pointer
+.active
+    &::after
+        display: block
+        content: ""
+        height: 4px
+        width: 100%
+        background-color: black
+        transition: width .5s ease-in-out
+a
+    text-decoration: none
+
+@media (max-width: 1020px) and (min-width: 731px) 
+    .navigation_search
+        width: 450px
+    .navigation
+        flex-direction: column-reverse
+        justify-content: space-between
+        align-items: flex-start
+        height: 150px
+@media (max-width: 730px) and (min-width: 476px) 
+    .navigation_search
+        width: 450px
+    .navigation
+        flex-direction: column-reverse
+        justify-content: space-between
+        align-items: flex-start
+        height: 150px
+@media (max-width: 475px) and (min-width: 300px) 
+    .navigation_search
+        width: 200px
+        input
+            width: 225px
+    .navigation
+        flex-direction: column-reverse
+        justify-content: space-between
+        align-items: flex-start
+        height: 150px
+    .navigation_text
+        width: 100%
